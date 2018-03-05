@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PopcornNotify
 
 class ViewController: UIViewController {
     
@@ -15,6 +16,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        // Setup PopcornNotify with API key
+        let notify = PopcornNotify(withAPIkey: "ryan:pwd")
+        notify.notify(recipients: "notryancohen@gmail.com", "19088393634", message: "Hello, world!", subject: "Hello") { (error) in
+            if let error = error {
+                print("Error:", error.localizedDescription)
+            }
+        }
     }
     
     override func didReceiveMemoryWarning() {
