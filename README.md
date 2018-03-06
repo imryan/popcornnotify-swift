@@ -28,7 +28,7 @@ pod 'PopcornNotify'
 let notify = PopcornNotify(withAPIkey: "api:key")
 
 // Notify!
-notify.notify(recipients: "notryancohen@gmail.com", "19088393634", 
+notify.notify(recipients: "notryancohen@gmail.com", "2125551234", 
                  message: "Hello, world!", subject: "Hello") { (error) in
 
     if let error = error {
