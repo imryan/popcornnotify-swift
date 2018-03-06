@@ -8,17 +8,17 @@
 
 Pod::Spec.new do |s|
     s.name             = 'PopcornNotify'
-    s.version          = '1.0.0'
-    s.summary          = 'PopcornNotify in Swift.'
+    s.version          = '1.0.1'
+    s.summary          = 'Send simple emails and text messages from one API, in Swift.'
     
     s.description      = <<-DESC
-    PopcornNotify in Swift written for iOS.
+    Send simple emails and text messages from one API, in Swift. A PopcornNotify.com wrapper for iOS.
     DESC
     
-    s.homepage         = 'https://github.com/imryan/PopcornNotify'
+    s.homepage         = 'https://github.com/imryan/popcornnotify-swift'
     s.license          = { :type => 'MIT', :file => 'LICENSE' }
     s.author           = { 'Ryan Cohen' => 'notryancohen@gmail.com' }
-    s.source           = { :git => 'https://github.com/imryan/PopcornNotify.git', :tag => s.version.to_s }
+    s.source           = { :git => 'https://github.com/imryan/popcornnotify-swift.git', :tag => s.version.to_s }
     s.social_media_url = 'https://twitter.com/ryancohen'
     
     s.ios.deployment_target = '8.0'
