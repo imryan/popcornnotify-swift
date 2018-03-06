@@ -1,4 +1,4 @@
-# PopcornNotify
+# 🍿 PopcornNotify
 
 [![CI Status](http://img.shields.io/travis/imryan/PopcornNotify.svg?style=flat)](https://travis-ci.org/imryan/PopcornNotify)
 [![Version](https://img.shields.io/cocoapods/v/PopcornNotify.svg?style=flat)](http://cocoapods.org/pods/PopcornNotify)
