@@ -20,9 +20,25 @@ it, simply add the following line to your Podfile:
 pod 'PopcornNotify'
 ```
 
+## Usage
+
+```swift
+// Setup PopcornNotify with API key
+let notify = PopcornNotify(withAPIkey: "api:key")
+
+// Notify!
+notify.notify(recipients: "notryancohen@gmail.com", "19088393634", 
+                 message: "Hello, world!", subject: "Hello") { (error) in
+
+    if let error = error {
+        print("Error:", error.localizedDescription)
+    }
+}
+```
+
 ## Author
 
-imryan, notryancohen@gmail.com
+Ryan Cohen, notryancohen@gmail.com
 
 ## License
 
