@@ -1,4 +1,4 @@
-# PopcornNotify
+# 🍿 PopcornNotify
 
 [![CI Status](http://img.shields.io/travis/imryan/PopcornNotify.svg?style=flat)](https://travis-ci.org/imryan/PopcornNotify)
 [![Version](https://img.shields.io/cocoapods/v/PopcornNotify.svg?style=flat)](http://cocoapods.org/pods/PopcornNotify)
@@ -10,6 +10,7 @@
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+* Has no dependencies!
 
 ## Installation
 
@@ -27,7 +28,7 @@ pod 'PopcornNotify'
 let notify = PopcornNotify(withAPIkey: "api:key")
 
 // Notify!
-notify.notify(recipients: "notryancohen@gmail.com", "19088393634", 
+notify.notify(recipients: "theboys@github.com", "2125551234", 
                  message: "Hello, world!", subject: "Hello") { (error) in
 
     if let error = error {
