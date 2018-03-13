@@ -18,8 +18,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         // Setup PopcornNotify with API key
-        let notify = PopcornNotify(withAPIkey: "ryan:pwd")
-        notify.notify(recipients: "notryancohen@gmail.com", "19088393634", message: "Hello, world!", subject: "Hello") { (error) in
+        let popcorn = PopcornNotify(withAPIKey: "")
+        popcorn.notify(recipients: "me@gmail.com", "7329081234", message: "Hello, world!", subject: "Hello") { (error) in
             if let error = error {
                 print("Error:", error.localizedDescription)
             }

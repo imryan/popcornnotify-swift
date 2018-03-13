@@ -20,7 +20,7 @@ open class PopcornNotify {
     /// Initialize with API key
     ///
     /// - Parameter apiKey: Your registered API key
-    public init(withAPIkey apiKey: String) {
+    public init(withAPIKey apiKey: String) {
         // Assert that we've got an API key
         assert(apiKey.isEmpty == false, "API key must not be empty.")
         
@@ -40,24 +40,21 @@ open class PopcornNotify {
     open func notify(recipients: String..., message: String, subject: String,
                      handler: @escaping (_ error: Error?) -> ()) {
         
-        // Get API key ase UTF-8 data
-        guard let apiKeyData = apiKey?.data(using: .utf8) else {
+        // Format API key as UTF-8 data
+        guard let apiKey = apiKey, apiKey.count > 8 else {
             let error = NSError(domain: "com.popcornnotify.MissingAPIKey", code: -1, userInfo: [NSLocalizedDescriptionKey : "API key missing."])
             handler(error)
             return
         }
         
-        // Create a request to the base URL endpoint
+        // Create a request to the base URL endpoint and set headers
         var request = URLRequest(url: URL(string: endpoint)!)
-        
-        // Create Base64 representation of API key to authenticate with
-        let apiKeyBase64 = apiKeyData.base64EncodedString()
-        request.setValue("Basic \(apiKeyBase64)", forHTTPHeaderField: "Authorization")
+        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "POST"
         
-        // Format recipients by comma
+        // Format recipients by comma and build request body
         let recipientsString = recipients.joined(separator: ",")
-        request.httpBody = "recipients=\(recipientsString)&message=\(message)&subject=\(subject)".data(using: .utf8)
+        request.httpBody = "recipients=\(recipientsString)&message=\(message)&subject=\(subject)&api_key=\(apiKey)".data(using: .utf8)
         
         // Create data task with our request and return according to the response
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
