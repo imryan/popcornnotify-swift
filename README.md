@@ -25,11 +25,11 @@ pod 'PopcornNotify'
 
 ```swift
 // Setup PopcornNotify with API key
-let notify = PopcornNotify(withAPIkey: "api:key")
+let popcorn = PopcornNotify(withAPIkey: "api:key")
 
 // Notify!
-notify.notify(recipients: "theboys@github.com", "2125551234", 
-                 message: "Hello, world!", subject: "Hello") { (error) in
+popcorn(recipients: "theboys@github.com", "2125551234",
+           message: "Hello, world!", subject: "Hello") { (error) in
 
     if let error = error {
         print("Error:", error.localizedDescription)

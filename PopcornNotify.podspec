@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'PopcornNotify'
-    s.version          = '1.0.1'
+    s.version          = '1.0.2'
     s.summary          = 'Send simple emails and text messages from one API, in Swift.'
     
     s.description      = <<-DESC
