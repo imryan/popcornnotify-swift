@@ -25,7 +25,7 @@ pod 'PopcornNotify'
 
 ```swift
 // Setup PopcornNotify with API key
-let popcorn = PopcornNotify(withAPIkey: "api:key")
+let popcorn = PopcornNotify(withAPIKey: "api:key")
 
 // Notify!
 popcorn(recipients: "theboys@github.com", "2125551234",
